@@ -1,0 +1,11 @@
+/target/
+
+/yaml*/
+/yaml*
+/ser*/
+/ser*
+**/*.ser
+**/_*/
+**/_*
+#**/*.jar
+
