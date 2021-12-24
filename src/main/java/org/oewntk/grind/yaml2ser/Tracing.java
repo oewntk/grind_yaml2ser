@@ -22,9 +22,9 @@ public class Tracing
 	private static final PrintStream psHeap = System.out;
 	private static final PrintStream psTime = System.out;
 
-	public static boolean traceHeap = false;
+	public static final boolean traceHeap = false;
 
-	public static boolean traceTime = false;
+	public static final boolean traceTime = false;
 
 	public static long start()
 	{
