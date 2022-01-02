@@ -9,15 +9,15 @@
 
 This library reads a model from YAML files and writes it to serialized format.
 
-Project [grind_yaml2ser](https://github.com/x-englishwordnet/grind_yaml2ser)
+Project [grind_yaml2ser](https://github.com/oewntk/grind_yaml2ser)
 
-See also [model](https://github.com/x-englishwordnet/model/blob/master/README.md).
+See also [model](https://github.com/oewntk/model/blob/master/README.md).
 
-See also [fromyaml](https://github.com/x-englishwordnet/fromyaml/blob/master/README.md).
+See also [fromyaml](https://github.com/oewntk/fromyaml/blob/master/README.md).
 
-See also [toser](https://github.com/x-englishwordnet/toser/blob/master/README.md).
+See also [toser](https://github.com/oewntk/toser/blob/master/README.md).
 
-See also [x-englishwordnet](https://github.com/x-englishwordnet) and [globalwordnet/english-wordnet](https://github.com/globalwordnet/english-wordnet).
+See also [oewntk](https://github.com/oewntk) and [globalwordnet/english-wordnet](https://github.com/globalwordnet/english-wordnet).
 
 ## Dataflow
 
