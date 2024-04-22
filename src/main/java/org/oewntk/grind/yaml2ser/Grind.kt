@@ -1,14 +1,13 @@
 /*
  * Copyright (c) 2021-2021. Bernard Bou.
  */
+package org.oewntk.grind.yaml2ser
 
-package org.oewntk.grind.yaml2ser;
-
-import org.oewntk.model.Model;
-import org.oewntk.ser.out.ModelConsumer;
-import org.oewntk.yaml.in.Factory;
-
-import java.io.File;
+import org.oewntk.grind.yaml2ser.Tracing.progress
+import org.oewntk.grind.yaml2ser.Tracing.start
+import org.oewntk.ser.out.ModelConsumer
+import org.oewntk.yaml.`in`.Factory
+import java.io.File
 
 /**
  * Main class that generates the WN database in the SQL format
@@ -16,49 +15,50 @@ import java.io.File;
  * @author Bernard Bou
  * @see "https://sqlunet.sourceforge.net/schema.html"
  */
-public class Grind
-{
+object Grind {
+
 	/**
 	 * Main entry point
 	 *
-	 * @param args command-line arguments yamlDir [outputDir]
+	 * @param args command-line arguments
+	 * ```
+	 * yamlDir [outputDir]
+	 * ```
 	 */
-	public static void main(String[] args)
-	{
-		int iArg = 0;
+	@JvmStatic
+	fun main(args: Array<String>) {
+		val iArg = 0
 
 		// Tracing
-		final long startTime = Tracing.start();
+		val startTime = start()
 
 		// Input
-		File inDir = new File(args[iArg]);
-		Tracing.psInfo.println("[Input] " + inDir.getAbsolutePath());
+		val inDir = File(args[iArg])
+		Tracing.psInfo.println("[Input] " + inDir.absolutePath)
 
 		// Input2
-		File inDir2 = new File(args[iArg + 1]);
-		Tracing.psInfo.println("[Input2] " + inDir2.getAbsolutePath());
+		val inDir2 = File(args[iArg + 1])
+		Tracing.psInfo.println("[Input2] " + inDir2.absolutePath)
 
 		// Output
-		File outFile = new File(args[iArg + 2]);
-		if (!outFile.exists())
-		{
-			//noinspection ResultOfMethodCallIgnored
-			outFile.delete();
+		val outFile = File(args[iArg + 2])
+		if (!outFile.exists()) {
+			outFile.delete()
 		}
-		Tracing.psInfo.println("[Output] " + outFile.getAbsolutePath());
+		Tracing.psInfo.println("[Output] " + outFile.absolutePath)
 
 		// Supply model
-		Tracing.progress("before model is supplied,", startTime);
-		Model model = new Factory(inDir, inDir2).get();
+		progress("before model is supplied,", startTime)
+		val model = Factory(inDir, inDir2).get()
 		//Tracing.psInfo.printf("[Model] %s%n%s%n%n", Arrays.toString(model.getSources()), model.info());
-		Tracing.progress("after model is supplied,", startTime);
+		progress("after model is supplied,", startTime)
 
 		// Consume model
-		Tracing.progress("before model is consumed,", startTime);
-		new ModelConsumer(outFile).accept(model);
-		Tracing.progress("after model is consumed,", startTime);
+		progress("before model is consumed,", startTime)
+		ModelConsumer(outFile).accept(model!!)
+		progress("after model is consumed,", startTime)
 
 		// End
-		Tracing.progress("total,", startTime);
+		progress("total,", startTime)
 	}
 }
