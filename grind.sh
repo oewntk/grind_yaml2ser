@@ -24,4 +24,5 @@ if [ -z "$4" ]; then
 	OUTSER=oewn.ser
 fi
 
-java -ea -jar oewn-grind-yaml2ser.jar "${IN}" "${IN2}" "${OUTDIR}/${OUTSER}"
+jar=target/yaml2ser-1.0.5-uber.jar
+java -ea -jar "${jar}" "${IN}" "${IN2}" "${OUTDIR}/${OUTSER}"
