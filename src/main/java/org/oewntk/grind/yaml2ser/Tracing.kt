@@ -14,7 +14,6 @@ import java.util.*
  * @author Bernard Bou
  */
 object Tracing {
-	@JvmField
 	val psInfo: PrintStream = System.out
 	val psErr: PrintStream = System.err
 	private val psHeap: PrintStream = System.out
@@ -24,7 +23,6 @@ object Tracing {
 
 	private const val TRACE_TIME: Boolean = false
 
-	@JvmStatic
 	fun start(): Long {
 		val startTime = System.currentTimeMillis()
 
@@ -36,7 +34,6 @@ object Tracing {
 		return startTime
 	}
 
-	@JvmStatic
 	fun progress(message: String?, startTime: Long) {
 		if (TRACE_TIME) {
 			val endTime = System.currentTimeMillis()
