@@ -7,5 +7,5 @@
 **/*.ser
 **/_*/
 **/_*
-#**/*.jar
-
+/dependency-reduced-pom.xml
+/build
