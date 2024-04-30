@@ -28,5 +28,5 @@ if [ -z "$4" ]; then
 	OUTSER=oewn.ser
 fi
 
-jar=target/yaml2ser-1.0.5-uber.jar
+jar=target/yaml2ser-2.1.0-uber.jar
 java -ea -jar "${jar}" "${IN}" "${IN2}" "${OUTDIR}/${OUTSER}"
