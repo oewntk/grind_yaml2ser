@@ -5,6 +5,7 @@ package org.oewntk.grind.yaml2ser
 
 import org.oewntk.grind.yaml2ser.Tracing.progress
 import org.oewntk.grind.yaml2ser.Tracing.start
+import org.oewntk.model.ModelInfo
 import org.oewntk.ser.out.ModelConsumer
 import org.oewntk.yaml.`in`.Factory
 import java.io.File
@@ -49,16 +50,24 @@ object Grind {
 
         // Supply model
         progress("before model is supplied,", startTime)
-        val model = Factory(inDir, inDir2).get()
+        val model = Factory(inDir, inDir2).get()!!
+
         //Tracing.psInfo.printf("[Model] %s%n%s%n%n", Arrays.toString(model.getSources()), model.info());
         progress("after model is supplied,", startTime)
 
         // Consume model
         progress("before model is consumed,", startTime)
-        ModelConsumer(outFile).accept(model!!)
+        ModelConsumer(outFile).accept(model)
         progress("after model is consumed,", startTime)
 
         // End
         progress("total,", startTime)
+
+        // info
+        val modelInfo = model.info()
+        val modelCounts = ModelInfo.counts(model)
+        val modelInfo2 = "$modelInfo\n$modelCounts"
+        Tracing.psInfo.println(modelInfo2)
+        File(if (args.size == 4) args[iArg + 3] else "oewn.ser.info").writeText(modelInfo2)
     }
 }
