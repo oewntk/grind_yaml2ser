@@ -9,3 +9,4 @@
 **/_*
 #**/*.jar
 
+/dependency-reduced-pom.xml
