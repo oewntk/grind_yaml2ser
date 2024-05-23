@@ -1,5 +1,5 @@
 /target/
-
+/build/
 /yaml*/
 /yaml*
 /ser*/
@@ -8,4 +8,4 @@
 **/_*/
 **/_*
 /dependency-reduced-pom.xml
-/build
+/oewn-grind-yaml2ser.jar
