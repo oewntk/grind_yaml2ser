@@ -8,5 +8,5 @@
 **/_*/
 **/_*
 #**/*.jar
-
 /dependency-reduced-pom.xml
+/oewn-grind-yaml2ser.jar
