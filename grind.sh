@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# Copyright (c) 2024. Bernard Bou.
+#
+
 IN="$1"
 if [ -z "$1" ]; then
 	IN=yaml
@@ -24,4 +28,5 @@ if [ -z "$4" ]; then
 	OUTSER=oewn.ser
 fi
 
-java -ea -jar oewn-grind-yaml2ser.jar "${IN}" "${IN2}" "${OUTDIR}/${OUTSER}"
+jar=target/yaml2ser-2.1.1-uber.jar
+java -ea -jar "${jar}" "${IN}" "${IN2}" "${OUTDIR}/${OUTSER}"

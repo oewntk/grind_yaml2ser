@@ -17,7 +17,8 @@ See also [fromyaml](https://github.com/oewntk/fromyaml/blob/master/README.md).
 
 See also [toser](https://github.com/oewntk/toser/blob/master/README.md).
 
-See also [oewntk](https://github.com/oewntk) and [globalwordnet/english-wordnet](https://github.com/globalwordnet/english-wordnet).
+See also [oewntk](https://github.com/oewntk)
+and [globalwordnet/english-wordnet](https://github.com/globalwordnet/english-wordnet).
 
 ## Dataflow
 

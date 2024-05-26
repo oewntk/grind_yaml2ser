@@ -1,0 +1,22 @@
+lexes: 161345, senses: 212082, synsets: 120138, verb frames: 39, verb templates: 170
+lexes                                             : 161345
+lemmas (distinct CS)                              : 153376
+lemmas (distinct LC)                              : 151942
+lemmas (cased)                                    :  42807
+discriminant types                                :      2
+lexes with discriminant                           :    108
+lexes with pronunciation                          :  33341
+lexes with multi senses                           :  26610
+distinct lexes by key W_P_A_type (deep)           : 161345
+distinct lexes by key W_P_D_type (shallow)        : 161345
+distinct lexes by key W_P_A_pos (pos)             : 161344
+distinct lexes by key W_P_A_lc_type (ic)          : 160046
+distinct lexes by key W_P_lc_pos (pwn)            : 159977
+senses                                            : 212082
+distinct sense sets in lexes                      : 161345
+senses in sense sets                              : 212082
+senses with relations                             :  61796
+sense relations                                   : 122041
+synsets                                           : 120138
+synsets with relations                            : 112210
+synset relations                                  : 293876
