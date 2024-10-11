@@ -2,7 +2,7 @@
 <img width="256" height="256" src="images/oewntk.png" alt="OEWNTK">
 </p>
 <p align="center">
-<img width="150"src="images/mavencentral.png" alt="MavenCentral">
+<img width="150" src="images/mavencentral.png" alt="MavenCentral">
 </p>
 
 # Open English Wordnet YAML-to-SER grinder
@@ -46,7 +46,7 @@ grinds the SQL database
 
 		<groupId>io.github.oewntk</groupId>
 		<artifactId>yaml2ser</artifactId>
-		<version>2.1.2</version>
+		<version>2.1.3</version>
 
 ## Dependencies
 
