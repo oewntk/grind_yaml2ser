@@ -16,8 +16,12 @@ import java.util.*
 object Tracing {
 
     val psInfo: PrintStream = System.out
+
+    @Suppress("unused")
     val psErr: PrintStream = System.err
+
     private val psHeap: PrintStream = System.out
+
     private val psTime: PrintStream = System.out
 
     private const val TRACE_HEAP: Boolean = false
@@ -98,6 +102,7 @@ object Tracing {
             )
         }
 
+        @Suppress("unused")
         enum class Unit(val div: Long) {
             U(1), K(1024 * U.div), M(1024 * K.div), G(1024 * M.div)
         }
