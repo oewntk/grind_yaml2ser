@@ -43,7 +43,7 @@ object Grind {
 
         // Output
         val outFile = File(args[iArg + 2])
-        if (!outFile.exists()) {
+        if (outFile.exists() && !outFile.isDirectory) {
             outFile.delete()
         }
         Tracing.psInfo.println("[Output] " + outFile.absolutePath)
