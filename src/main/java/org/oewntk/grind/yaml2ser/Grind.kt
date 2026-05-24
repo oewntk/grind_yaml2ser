@@ -43,6 +43,10 @@ object Grind {
 
         // Output
         val outFile = File(args[iArg + 2])
+        val outDir = outFile.parentFile
+        if (!outDir.exists()) {
+            outDir.mkdirs()
+        }
         if (outFile.exists() && !outFile.isDirectory) {
             outFile.delete()
         }
