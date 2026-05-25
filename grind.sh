@@ -35,5 +35,16 @@ if [ -z "$5" ]; then
 	OUTSERINFO=oewn.ser.info
 fi
 
-jar=target/yaml2ser-2.4.0-uber.jar
+jar=yaml2ser-2.4.0-uber.jar
+if [ ! -e "${jar}" ]; then
+  if [ ! -e "target/${jar}" ]; then
+    echo "Non existing uber jar" >&2
+    exit 1
+    fi
+  ln -s "target/${jar}"
+  fi
+if [ ! -e "${jar}" ]; then
+  echo "Non existing uber jar" >&2
+  exit 2
+  fi
 java -ea -jar "${jar}" "${IN}" "${IN2}" "${OUTDIR}/${OUTSER}" "${OUTDIR}/${OUTSERINFO}"
