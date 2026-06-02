@@ -4,8 +4,12 @@
 /yaml*
 /ser*/
 /ser*
+/out*/
+/out*
+
 **/*.ser
 **/_*/
 **/_*
 **/*.jar
+
 /dependency-reduced-pom.xml
