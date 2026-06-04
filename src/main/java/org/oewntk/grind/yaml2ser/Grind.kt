@@ -32,7 +32,6 @@ object Grind {
     @JvmStatic
     fun main(args: Array<String>) {
         val parser = ArgParser("yaml2ser")
-
         // Options (start with - or --)
         // @formatter:off
         val in1 by parser.argument(    ArgType.String,                                              description = "Input dir or file")
