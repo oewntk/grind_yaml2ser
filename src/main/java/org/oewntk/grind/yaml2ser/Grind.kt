@@ -71,17 +71,17 @@ object Grind {
         Tracing.psInfo.println("[Output] " + outFile.absolutePath)
 
         // Supply model
-        progress("before model is supplied,", startTime)
+        progress("before model is supplied", startTime)
         val model = Factory(inDir, inDir2, verbose = verbose).get()!!
-        progress("after model is supplied,", startTime)
+        progress("after model is supplied", startTime)
 
         // Consume model
-        progress("before model is consumed,", startTime)
+        progress("before model is consumed", startTime)
         ModelConsumer(outFile, verbose = verbose).accept(model)
-        progress("after model is consumed,", startTime)
+        progress("after model is consumed", startTime)
 
         // End
-        progress("total,", startTime)
+        progress("total", startTime)
 
         // info
         val modelInfo = model.info()
