@@ -35,7 +35,7 @@ if [ -z "$5" ]; then
 	OUTSERINFO=oewn.ser.info
 fi
 
-jar=yaml2ser-3.0.1-uber.jar
+jar=yaml2ser-3.0.1-SNAPSHOT-uber.jar
 if [ ! -e "${jar}" ]; then
   if [ ! -e "target/${jar}" ]; then
     echo "Non existing uber jar" >&2
